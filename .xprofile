@@ -1,24 +1,7 @@
-# dbus
-eval $(dbus-launch --sh-syntax --exit-with-session)
-
-# sound
-/usr/bin/gentoo-pipewire-launcher &
-
-# monitor shutdown
-xset -dpms &
-xset s off &
-
 # theming
 /usr/bin/picom --experimental-backends &
-xrdb -merge ~/.Xresources &
 nitrogen --restore &
 /home/kojuma/.config/polybar/launch_polybar.sh &
-
-# general
-export XMODIFIERS="@im=fcitx"
-export GTK_IM_MODULE=fcitx
-fcitx &
-keepassxc &
 
 # bspwm
 sxhkd &
